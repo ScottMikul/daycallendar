@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day Calendar</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- icon css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- bootstrapjs / jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    
+    <!-- my javascript -->
+    <script defer src="assets/scripts/javascript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <h1>Work Day Scheduler</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h3>a simple day Calendar for scheduling your work activities</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h3 id="todayDate"></h3>
+        </div>
+    </div>
+
+        <hr style="height:10px;border:none;color:#333;background-color:#333;" />
+
+    <div class="container" id ="2ndcontainer">
+        <div class="row mb-n2 d-none" id="time-row"  >
+                <div class="col-1 time-border pt-2 mr-n3 mb-1 " id="time">9AM</div>
+                <div class="col-10" id="event" data-index="0">
+                    <textarea name="" class="bg-light-grey" cols="130" rows="2"></textarea>
+                </div>
+                <div class="col-1 bg-light-blue save-border pt-2 ml-n3 mb-1 save"><i class="material-icons">save</i></div>       
+        </div> 
+    </div>
+
+        
+
+
+    
+
+</body>
+</html>

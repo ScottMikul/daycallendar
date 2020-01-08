@@ -1,0 +1,23 @@
+.bg-light-grey{
+    background-color:lightgrey;
+}
+.bg-light-blue{
+    background-color:blue;
+}
+.bg-yellow-green{
+    background-color:yellowgreen;
+}
+.time-border{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+textarea{
+    resize: none;
+}
+.save-border{
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-left: 2px solid black;
+    border-bottom: 1px solid black;
+    border-top:1px solid black;
+}
