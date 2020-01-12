@@ -21,3 +21,17 @@ textarea{
     border-bottom: 1px solid black;
     border-top:1px solid black;
 }
+
+.input-group>.input-group-prepend {
+    flex: 0 0 10%;
+}
+.input-group .input-group-text {
+    width: 100%;
+}
+
+.dark-border{
+    border:1px solid black;
+}
+.row{
+    margin-bottom: 1px;
+}

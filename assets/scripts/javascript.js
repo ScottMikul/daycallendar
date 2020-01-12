@@ -2,7 +2,7 @@ $(function(){
 
 
     $("#todayDate").text(moment().format("MMM, Do YYYY") );
-    hours = 9;
+
     var d = new Date();
     currentTime = d.getHours();
     var storedEvents = JSON.parse(localStorage.getItem("events"));
@@ -12,7 +12,8 @@ $(function(){
     for(var i = 0;i <9 ;i++){
         var rowDiv = $("#time-row").clone();
         rowDiv.removeClass("d-none");
-        var timeEl = rowDiv.children().eq(0);
+        var timeEl = rowDiv.find(".hour");
+        var  hours = 9+i;
         if(9+i<12){
             timeEl.text(9+i+"AM");
         }
@@ -21,12 +22,17 @@ $(function(){
         }
         else{
             timeEl.text(9+i-12+"PM");
+           
+            hours = 9+i-12;
+            console.log(hours);
+        }
+        //add a space to the text for hours less than 10 to make the times align nicely.
+        if(hours<10){
+            timeEl.html("&nbsp&nbsp"+timeEl.text());
         }
 
-        var textAreaDiv = rowDiv.children().eq(1);
-        textAreaDiv.attr("data-index",i);
-
-        var textAreaEL = textAreaDiv.children().eq(0);
+        var textAreaEL =rowDiv.find(".text");
+        textAreaEL.attr("data-index",i);
         if(i+9 < currentTime){
             textAreaEL.addClass("bg-light-grey");
         }
@@ -39,11 +45,12 @@ $(function(){
         if(storedEvents[i]!==null||storedEvents[i]!==""){
             textAreaEL.val(storedEvents[i]);
         }
+
         $("#2ndcontainer").append(rowDiv);
     }
     $(".save").click(function(){
         var index = $(this).prev().attr("data-index");
-        var eventValue = $(this).prev().children(0).val();
+        var eventValue = $(this).prev().val();
         if(eventValue===""){
             return;
         }
